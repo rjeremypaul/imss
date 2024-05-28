@@ -14,6 +14,20 @@ $inventory->checkLogin();
 <script src="js/common.js"></script>
 <?php include('inc/container.php');?>
 
+<style>
+.btn:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+    color: blue;
+}
+
+/* Add active effect for buttons */
+.btn.active {
+    background-color: #004080; /* Change the background color when clicked */
+    color: blue;
+}
+</style>
+
+
 <div class="container-fluid">			
 	<div class="row">
 		<div class="col-lg-2">
@@ -86,4 +100,14 @@ $inventory->checkLogin();
         </div>	
 	</div>	
 </div>	
-<?php include('inc/footer.php');?>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <select id="exportFormat" class="form-select">
+            <option value="csv">CSV</option>
+            <option value="pdf">PDF</option>
+            <option value="text">Text</option>
+        </select>
+        <button id="exportButton" class="btn btn-primary">Export</button>
+    </div>
+</div>
